@@ -25,4 +25,4 @@ $ git log	==	Check previous versions
 $ rm -rf .git	==	To remove the git traking (Dangerous)
 
 
-$ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet
+$ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet...
