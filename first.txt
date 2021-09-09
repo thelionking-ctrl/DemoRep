@@ -1,28 +1,33 @@
 $ git config --global user.name "lionking" 	== Set Username
 
 
-$ git config --global user.email "gallantgaurav.gc@gmail.com" 		== Set email
+$ git config --global user.email "gallantgaurav.gc@gmail.com" 		==	Set email
 
 
 $ git config --list	==	See config details like username and email
 
 
-$ git status		== 	Check the status of the folder
+$ git status		== 	Check the status of the folder		(STEP 1)
 
 
-$ git init	==	to initalize
+$ git init	==	to initalize		(STEP 2)
 
 
-$ git add --a		==	Stage all files in git repository
+$ git add --a		==	Stage all files in git repository(About to commit)	(STEP 3)
 
 
-$ git commit -m "Comment"	==	Commit
+$ git commit -m "Comment"	==	Commit		(STEP 4)
 
 
-$ git log	==	Check previous versions
+$ git log	==	Check previous versions		(STEP 5)
 
 
-$ rm -rf .git	==	To remove the git traking (Dangerous)
+$ rm -rf .git	==	To remove the git tracking (Dangerous)
 
 
-$ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet...
+$ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet
+
+
+.gitignore	==	Create a file with this name and add the name of the file like "abc.log" OR "*.log"(for every log file) OR "folder/" for a folder OR "/folder/" for outer folder to be ignored from adding in git
+
+$ git diff	==	Compares files in staging are vs (if changed after adding in staging area)
