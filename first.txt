@@ -1,0 +1,28 @@
+$ git config --global user.name "lionking" 	== Set Username
+
+
+$ git config --global user.email "gallantgaurav.gc@gmail.com" 		== Set email
+
+
+$ git config --list	==	See config details like username and email
+
+
+$ git status		== 	Check the status of the folder
+
+
+$ git init	==	to initalize
+
+
+$ git add --a		==	Stage all files in git repository
+
+
+$ git commit -m "Comment"	==	Commit
+
+
+$ git log	==	Check previous versions
+
+
+$ rm -rf .git	==	To remove the git traking (Dangerous)
+
+
+$ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet
