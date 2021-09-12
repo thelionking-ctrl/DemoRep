@@ -30,4 +30,28 @@ $ git clone ADDRESS CHANGED_NAME	== 	To download repository from internet
 
 .gitignore	==	Create a file with this name and add the name of the file like "abc.log" OR "*.log"(for every log file) OR "folder/" for a folder OR "/folder/" for outer folder to be ignored from adding in git
 
+
 $ git diff	==	Compares files in staging are vs (if changed after adding in staging area)
+
+
+$ git diff --staged	==	Compares previous commit to present staging area
+
+
+$ git commit -a -m "Direct Commit without add"
+
+
+(Press Q to exit pager incase of unending screen)
+
+
+$ git rm abc.txt	==	Delete a file name abc and stage it as well from terminal
+
+
+$ git mv old.txt new.txt	==	Rename a file using terminal
+
+
+$ git rm --cached abc.xyz	==	Stop tracking a file (Add a file in .gitignore and then run this command abc.xyz)
+
+
+$ git log -p		==	See and compare changes in file
+$ git log -p -3		==	Last three difference
+$ git log --stat	==	Difference in short
