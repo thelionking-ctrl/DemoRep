@@ -1,3 +1,6 @@
+(Press Q to exit pager incase of unending screen)
+
+
 $ git config --global user.name "lionking" 	== Set Username
 
 
@@ -14,7 +17,7 @@ $ git init	==	to initalize		(STEP 2)
 
 
 $ git add --a		==	Stage all files in git repository(About to commit)	(STEP 3)
-
+$ git add abc.txt	==	Stage only abc.txt
 
 $ git commit -m "Comment"	==	Commit		(STEP 4)
 
@@ -40,8 +43,6 @@ $ git diff --staged	==	Compares previous commit to present staging area
 $ git commit -a -m "Direct Commit without add"
 
 
-(Press Q to exit pager incase of unending screen)
-
 
 $ git rm abc.txt	==	Delete a file name abc and stage it as well from terminal
 
@@ -52,6 +53,65 @@ $ git mv old.txt new.txt	==	Rename a file using terminal
 $ git rm --cached abc.xyz	==	Stop tracking a file (Add a file in .gitignore and then run this command abc.xyz)
 
 
-$ git log -p		==	See and compare changes in file
-$ git log -p -3		==	Last three difference
-$ git log --stat	==	Difference in short
+$ git log -p				==	See and compare changes in file
+$ git log -p -3				==	Last three difference
+$ git log --stat			==	Difference in short
+$ git log --pretty=oneline		==	Display all comments in one line
+$ git log --pretty=short		==	Display all comments in short
+$ git log --pretty=full			==	Display some more info
+$ git log --since=2.days		==	Changes in last 2 days
+$ git log --since=2.weeks		==	Changes in last 2 Weeks and so on
+$ git log --pretty=format:"%h -- %ae"	==	Add more filters from this website https://git-scm.com/docs/git-log
+
+
+$ git commit --amend	==	To make changes in file
+
+
+$ git restore --staged abc.txt		==	unstage abc.txt after using add (unstage)
+
+
+$ git checkout -- abc.txt		==	Restore a file to its just previous verion. Accidently I made changes in a file now it want to revert it back to its just previous state.
+
+
+$ git checkout -f	==	Restore all the files to its previous state
+
+
+
+
+
+SYNC WITH ONLINE REPOSITORY FRIM GITHUB
+
+
+$ git remote add origin https://github.com/thelionking-ctrl/DemoRep.git		==	Add a URL named "origin" from the internet as a remote
+
+$ git remote	==	Check remote
+
+$ git remote -v 	==	To check url for pull(get files from internet) and push(Update repository on internet)
+
+
+github.com => SSH and GPG keys => Enter Title and SSH key for providing access.
+For SSH key, google "ssh keys github", open the furst link starting with "https://docs.github.com/"  and follow the steps in generating the new SSH key. The command goes like $ ssh-keygen -t ed25519 -C "your_email@example.com" then run "eval "$(ssh-agent -s)"" like mentioned in the website then run "ssh-add ~/.ssh/id_ed25519". Click on "Adding a new SSH key on the doc", from the page copy "$ clip < ~/.ssh/id_ed25519.pub" and replace clip < with tail that means "$ tail ~/.ssh/id_ed25519.pub".
+Copy the SSH key and paste it in the website
+
+
+$ git push -u origin master	==	Push all the code to online repository. Whatever changes you made in repository you commit and run this, it will all be uploaded to the online repository
+
+
+
+
+
+ALIAS
+
+$ git config -- global alias.st status	==	Instead of status now you need to type st
+$ git config -- global alias.us 'restore --staged --'	== Type us intead of restore --staged -- to unstage
+
+
+
+
+BRANCHING
+
+$ git checkout -b develop	==	Here -b creates a new branch called develop
+
+$ git checkout master		==	Returns back to master branch
+
+$ git branch			==	Lists all the branch
